@@ -28,7 +28,7 @@ When connecting to the website, you are prompted with a screen as below.
 
 ![Alt text](/UIUCTF2021/img/WASMBABY/1-root.png?raw=true "Root of Challenge Website")
 
-Pressing **CTRL+SHIFT+I** brings up the developer console in chrome.
+Pressing **CTRL+SHIFT+i** brings up the developer console in chrome.
 
 ![Alt text](/UIUCTF2021/img/WASMBABY/2-dev-console.png?raw=true "Root of Challenge Website")
 

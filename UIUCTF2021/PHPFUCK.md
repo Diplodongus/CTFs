@@ -35,7 +35,7 @@ Connecting to their website, we can see this website is running PHP Version 7.4.
 
 Furthermore, it is commented at the top that “Flag is inside ./flag.php”
 
-When we try to add /flag.php, we just see “No flag for you!”
+When we try to navigate to /flag.php, we just see “No flag for you!”
 
 ![Alt text](/UIUCTF2021/img/PHPFUCK/2-flag.php.png?raw=true "Root of website given")
 

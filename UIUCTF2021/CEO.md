@@ -34,9 +34,9 @@ Hashcat ```sudo apt install hashcat```
 ## Detailed solution
 The first thing I did was open the pcap file in wireshark to see if there was any low-hanging fruit; maybe the password is unencrypted. (Based off the tags, this is obviously not true, but always worth trying.)
 
- 
-
 Wireshark tells us that there is a connection to the SSID “joesheer”.
+
+![Alt text](/UIUCTF2021/img/CEO/1-wireshark.png?raw=true "Wireshark Screenshot")
 
 From here, I used an online-based cap-to-hccapx converter to put the file in the format that hashcat can utilize properly. (I used https://www.onlinehashcrack.com/tools-cap-to-hccapx-converter.php)
 
@@ -46,14 +46,14 @@ IF YOU ARE FOLLOWING THIS WITH SENSITIVE INFORMATION I.E. A CLIENT DO NOT SEND I
 
 To do this with more sensitive information / offline, I would recommend using the official hashcat-utils cap2hccapx.c file. (https://github.com/hashcat/hashcat-utils/blob/master/src/cap2hccapx.c)
 ```
- 
+![Alt text](/UIUCTF2021/img/CEO/2-hccapx.png?raw=true "HCCAPX Conversion from external site")
 
 Now that I had the file in the correct format, I could use hashcat to crack the file. You must also have a password dictionary for hashcat to try with. I used the official rockyou.txt file which is attached.
 
 ```
 hashcat -m 2500 wifi.hccapx rockyou.txt --show
 ```
- 
+![Alt text](/UIUCTF2021/img/CEO/3-hashcat.png?raw=true "Output from Hashcat")
 (Screenshot is in PowerShell, but essentially the same output.)
 
 Within 6 seconds, my GPU was able to crack the WiFi password, and the flag is uiuctf{nanotechnology}.

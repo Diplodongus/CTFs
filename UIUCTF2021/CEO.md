@@ -54,6 +54,7 @@ Now that I had the file in the correct format, I could use hashcat to crack the 
 hashcat -m 2500 wifi.hccapx rockyou.txt --show
 ```
 ![Alt text](/UIUCTF2021/img/CEO/3-hashcat.png?raw=true "Output from Hashcat")
+
 (Screenshot is in PowerShell, but essentially the same output.)
 
 Within 6 seconds, my GPU was able to crack the WiFi password, and the flag is uiuctf{nanotechnology}.

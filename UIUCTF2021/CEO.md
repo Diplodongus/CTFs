@@ -16,8 +16,8 @@ E.g.: uiuctf{password}
 MISC, Cracking, Beginner
 
 ## Attached files
-- megacorp-01.cap
-- rockyou.txt
+- [megacorp-01.cap](/UIUCTF2021/attachments/megacorp-01.cap?raw=true)
+- [rockyou.txt](https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt)
 
 ## Summary
 This challenge gave a packet capture that contained a wireless connection to an AP with SSID joesheer. I was able to decrypt the password using hashcat version 6.2.3.
@@ -42,10 +42,13 @@ From here, I used an online-based cap-to-hccapx converter to put the file in the
 
 ```
 **IMPORTANT NOTE:**
-IF YOU ARE FOLLOWING THIS WITH SENSITIVE INFORMATION I.E. A CLIENT DO NOT SEND INFORMATION TO 3RD PARTIES SUCH AS THE WEBSITE ABOVE. YOU HAVE NO CONTROL OVER WHAT THEY SAVE AND ANYTHING YOU SEND CAN POTENTIALLY BE LEAKED
+IF YOU ARE FOLLOWING THIS WITH SENSITIVE INFORMATION 
+I.E. A CLIENT DO NOT SEND INFORMATION TO 3RD PARTIES SUCH AS THE WEBSITE ABOVE. 
+YOU HAVE NO CONTROL OVER WHAT THEY SAVE AND ANYTHING YOU SEND CAN POTENTIALLY BE LEAKED
 
 To do this with more sensitive information / offline, I would recommend using the official hashcat-utils cap2hccapx.c file. (https://github.com/hashcat/hashcat-utils/blob/master/src/cap2hccapx.c)
 ```
+
 ![Alt text](/UIUCTF2021/img/CEO/2-hccapx.png?raw=true "HCCAPX Conversion from external site")
 
 Now that I had the file in the correct format, I could use hashcat to crack the file. You must also have a password dictionary for hashcat to try with. I used the official rockyou.txt file which is attached.

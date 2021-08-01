@@ -46,7 +46,10 @@ IF YOU ARE FOLLOWING THIS WITH SENSITIVE INFORMATION
 I.E. A CLIENT DO NOT SEND INFORMATION TO 3RD PARTIES SUCH AS THE WEBSITE ABOVE. 
 YOU HAVE NO CONTROL OVER WHAT THEY SAVE AND ANYTHING YOU SEND CAN POTENTIALLY BE LEAKED
 
-To do this with more sensitive information / offline, I would recommend using the official hashcat-utils cap2hccapx.c file. (https://github.com/hashcat/hashcat-utils/blob/master/src/cap2hccapx.c)
+To do this with more sensitive information / offline, 
+I would recommend using the official hashcat-utils cap2hccapx.c file. 
+
+(https://github.com/hashcat/hashcat-utils/blob/master/src/cap2hccapx.c)
 ```
 
 ![Alt text](/UIUCTF2021/img/CEO/2-hccapx.png?raw=true "HCCAPX Conversion from external site")

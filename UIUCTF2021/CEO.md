@@ -16,7 +16,7 @@ E.g.: uiuctf{password}
 MISC, Cracking, Beginner
 
 ## Attached files
-- [megacorp-01.cap](/UIUCTF2021/attachments/megacorp-01.cap?raw=true)
+- [megacorp-01.cap](https://raw.githubusercontent.com/Diplodongus/CTFs/main/UIUCTF2021/attachments/megacorp-01.cap?raw=true)
 - [rockyou.txt](https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt)
 
 ## Summary
@@ -36,7 +36,7 @@ The first thing I did was open the pcap file in wireshark to see if there was an
 
 Wireshark tells us that there is a connection to the SSID “joesheer”.
 
-![Alt text](/UIUCTF2021/img/CEO/1-wireshark.png?raw=true "Wireshark Screenshot")
+![Wireshark Screenshot](https://raw.githubusercontent.com/Diplodongus/CTFs/main/UIUCTF2021/img/CEO/1-wireshark.png?raw=true "Wireshark Screenshot")
 
 From here, I used an online-based cap-to-hccapx converter to put the file in the format that hashcat can utilize properly. (I used https://www.onlinehashcrack.com/tools-cap-to-hccapx-converter.php)
 
@@ -52,14 +52,14 @@ I would recommend using the official hashcat-utils cap2hccapx.c file.
 (https://github.com/hashcat/hashcat-utils/blob/master/src/cap2hccapx.c)
 ```
 
-![Alt text](/UIUCTF2021/img/CEO/2-hccapx.png?raw=true "HCCAPX Conversion from external site")
+![HCCAPX Conversion](https://raw.githubusercontent.com/Diplodongus/CTFs/main/UIUCTF2021/img/CEO/2-hccapx.png?raw=true "HCCAPX Conversion from external site")
 
 Now that I had the file in the correct format, I could use hashcat to crack the file. You must also have a password dictionary for hashcat to try with. I used the official rockyou.txt file which is attached.
 
 ```
 hashcat -m 2500 wifi.hccapx rockyou.txt --show
 ```
-![Alt text](/UIUCTF2021/img/CEO/3-hashcat.png?raw=true "Output from Hashcat")
+![Hashcat Output](https://raw.githubusercontent.com/Diplodongus/CTFs/main/UIUCTF2021/img/CEO/3-hashcat.png?raw=true "Output from Hashcat")
 
 (Screenshot is in PowerShell, but essentially the same output.)
 
